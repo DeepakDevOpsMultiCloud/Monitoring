@@ -155,6 +155,15 @@ http://<your-ip>:80
 ---
 - We accessed the Website full picture of website isn't possible it is application side issue not our's
 
+To see the metrics in Prometheus the application should have /metrics folder, but for our CSS-Template we need to use some Exporters 
+Common Exporters like 
+- Exporter	Purpose	Default Port
+- node_exporter	OS metrics (CPU, memory)	9100
+- blackbox_exporter	ICMP/HTTP/TCP checks	9115
+- mysqld_exporter	MySQL metrics	9104
+- redis_exporter	Redis metrics	9121
+- cadvisor	Docker container metrics	8080
+
 ## ✅ Step 6: Install and Configure Blackbox Exporter
 
 ```bash
