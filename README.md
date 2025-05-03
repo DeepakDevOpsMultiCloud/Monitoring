@@ -2,7 +2,24 @@
 
 This guide outlines the step-by-step installation and configuration of Prometheus, Grafana, a static site, and the Blackbox Exporter for monitoring site availability.
 
----
+## 🛠️ Prerequisites for EC2 Instance
+
+- **Instance Type**: `t2.micro` (for testing) or `t2.medium` / `t3.medium` for better performance.
+- **Operating System**: Ubuntu 20.04 or 22.04 (recommended).
+- **Security Group Rules**:
+  - Allow **inbound access** on:
+    - TCP `9090` – for Prometheus
+    - TCP `3000` – for Grafana
+    - TCP `22` – for SSH
+- **Storage**: At least **10 GB**.
+- **User**: Use the default `ubuntu` user (Ubuntu AMI).
+
+### 🔄 Update the System
+
+```bash
+sudo apt update && sudo apt upgrade -y
+ 
+```
 
 ## ✅ Step 1: Create an Instance and Install Prometheus
 
@@ -134,7 +151,7 @@ cd blackbox_exporter-0.22.0.linux-amd64
 # Metrics will be available at:
 http://localhost:9115/metrics
 ```
-
+NOTE: Open Port 9115 in security Group
 ---
 
 ## ✅ Step 7: Configure Prometheus to Use Blackbox Exporter
