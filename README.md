@@ -4,7 +4,7 @@ This guide outlines the step-by-step installation and configuration of Prometheu
 
 ---
 
-## ✅ Step 1: Install Prometheus
+## ✅ Step 1: Create an Instance and Install Prometheus
 
 ```bash
 # Download Prometheus
@@ -58,6 +58,8 @@ sudo systemctl start prometheus
 sudo systemctl enable prometheus
 sudo systemctl status prometheus
 ```
+Check Whether Prometheus is installed or not 
+  <http://Ipaddress:9000>
 
 ---
 
