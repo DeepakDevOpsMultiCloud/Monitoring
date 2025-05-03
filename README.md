@@ -14,6 +14,8 @@ This guide outlines the step-by-step installation and configuration of Prometheu
 - **Storage**: At least **10 GB**.
 - **User**: Use the default `ubuntu` user (Ubuntu AMI).
 
+![](../Monitoring/Images/1.jpg)
+
 ### 🔄 Update the System
 
 ```bash
@@ -75,8 +77,13 @@ sudo systemctl start prometheus
 sudo systemctl enable prometheus
 sudo systemctl status prometheus
 ```
+
+![](../Monitoring/Images/2.jpg)
+
 Check Whether Prometheus is installed or not 
   <http://Ipaddress:9000>
+
+![](../Monitoring/Images/3.jpg)
 
 ---
 
@@ -96,7 +103,11 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 sudo systemctl status grafana-server
 ```
+![](../Monitoring/Images/4.jpg)
 
+Now Access it from Browser
+
+![](../Monitoring/Images/5.jpg)
 ---
 
 ## ✅ Step 4: Add Prometheus as a Grafana Data Source
