@@ -226,8 +226,10 @@ Open Prometheus web UI:
 
 ```http
 http://<your-ip>:9090/targets
+
 ```
 ![](../Monitoring/Images/12.jpg)
+![](../Monitoring/Images/13.jpg)
 
 You should see the target listed under `blackbox_static_site_check` and its status should be **UP**.
 
@@ -239,6 +241,9 @@ You should see the target listed under `blackbox_static_site_check` and its stat
 2. Add a panel
 3. Select metric: `probe_success`
 4. Apply filters and visualize uptime checks
+
+![](../Monitoring/Images/14.jpg)
+
 
 ---
 
