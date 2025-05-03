@@ -168,12 +168,14 @@ Common Exporters like
 
 ```bash
 # Download and extract
-wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.22.0/blackbox_exporter-0.22.0.linux-amd64.tar.gz
-tar -xvf blackbox_exporter-0.22.0.linux-amd64.tar.gz
+sudo wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.22.0/blackbox_exporter-0.22.0.linux-amd64.tar.gz
+sudo tar -xvf blackbox_exporter-0.22.0.linux-amd64.tar.gz
 cd blackbox_exporter-0.22.0.linux-amd64
 
 # Run Blackbox Exporter
 ./blackbox_exporter &
+
+![](../Monitoring/Images/11.jpg)
 
 # Metrics will be available at:
 http://localhost:9115/metrics
@@ -200,6 +202,7 @@ scrape_configs:
     static_configs:
       - targets:
         - http://localhost:80  # Replace with your site URL
+                              # http://3.110.169.228:80  
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -224,6 +227,7 @@ Open Prometheus web UI:
 ```http
 http://<your-ip>:9090/targets
 ```
+![](../Monitoring/Images/12.jpg)
 
 You should see the target listed under `blackbox_static_site_check` and its status should be **UP**.
 
