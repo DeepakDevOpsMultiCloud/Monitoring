@@ -106,6 +106,8 @@ sudo systemctl status grafana-server
 ![](../Monitoring/Images/4.jpg)
 
 Now Access it from Browser
+* Username & Password is "admin"
+After login change Password(Custom Password)
 
 ![](../Monitoring/Images/5.jpg)
 ---
@@ -114,13 +116,17 @@ Now Access it from Browser
 
 1. Open Grafana in your browser: `http://<your-ip>:3000`
 2. Login (default: `admin/admin`)
-3. Navigate to: **Gear Icon (⚙️) > Data Sources**
+3. Navigate to: Search **Gear Icon (⚙️) > Data Sources**
 4. Click **Add data source**
 5. Select **Prometheus**
 6. Set URL: `http://localhost:9090`
 7. Click **Save & Test**
 
 ---
+![](../Monitoring/Images/6.jpg)
+![](../Monitoring/Images/7.jpg)
+![](../Monitoring/Images/8.jpg)
+![](../Monitoring/Images/9.jpg)
 
 ## ✅ Step 5: Serve a Static Website with Nginx
 
@@ -145,8 +151,9 @@ sudo mv index.html /var/www/html/
 # Access your static site
 http://<your-ip>:80
 ```
-
+![](../Monitoring/Images/10.jpg)
 ---
+- We accessed the Website full picture of website isn't possible it is application side issue not our's
 
 ## ✅ Step 6: Install and Configure Blackbox Exporter
 
